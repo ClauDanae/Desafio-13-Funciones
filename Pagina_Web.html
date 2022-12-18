@@ -14,15 +14,42 @@
     <div style="width: 200px; height: 200px; border: 2px solid red;" id="div_3">Cuadro 3</div>
     <div style="width: 200px; height: 200px; border: 2px solid red;" id="div_4">Cuadro 4</div>
 
-   <!--<script>
+    <script>
+        var color = ""
         document.addEventListener('keydown', function (event) {
             if (event.key === 'a') {
-                /* Cambiar a color 1 */
+                color = "yellow"
+                console.log(color)
             } else if (event.key === 's') {
-                /* Cambiar a color 2 */
+                color = "green"
+                console.log(color)
+            } else if (event.key === 'd') {
+                color = "black"
+                console.log(color)
             }
+
         })
-    </script>-->
+        function pintar(elemento, color) {
+            elemento.style.backgroundColor = color
+        }
+
+        ele1 = document.getElementById("div_1");
+        ele1.addEventListener("click", function () {
+            pintar(ele1, color)
+        })
+        ele2 = document.getElementById("div_2");
+        ele2.addEventListener("click", function () {
+            pintar(ele2, color)
+        })
+        ele3 = document.getElementById("div_3");
+        ele3.addEventListener("click", function () {
+            pintar(ele3, color)
+        })
+        ele4 = document.getElementById("div_4");
+        ele4.addEventListener("click", function () {
+            pintar(ele4, color)
+        });
+    </script>
 </body>
 
 </html>
